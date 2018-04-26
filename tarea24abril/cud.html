@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+<title>lista cud</title>
+</head>
+<body>
+	<br>
+	<div>
+
+		<center>
+			<h1>Create Update Delete HTML</h1>
+			<br>
+			<br>
+
+			
+
+				<ol id="milista" type="1">
+	 		 		
+				</ol>  
+
+			</div>
+		</center>
+		
+
+	</div>
+	
+	<center>
+		<button onclick="lista()" >modificar lista</button>
+		
+	</center>
+
+
+
+</body>
+
+
+<script >
+	function lista(){
+	
+	
+ var x = prompt("1-insertar, 2-eliminar 3-actualizar");
+
+	switch(x){
+
+		case 1:
+		
+	alert("Ingresar elementos en la lista")
+		var x = prompt("cuantos elementos quieres insertar en la lista?")
+
+		var list = document.getElementById('milista');
+		
+		for(var i = 0; i<x ;i++){
+			var z = prompt("ingresa elemento "+(i+1));
+			var entry = document.createElement('li');
+			entry.appendChild(document.createTextNode(z));
+			list.appendChild(entry);
+		}
+		
+		break
+
+		case 2:
+		
+		var el = prompt("cual elemento deseas eliminar?")
+		var lista = document.getElementById('milista');
+		
+		lista.removeChild(list.childNodes[el]);
+		//eliminar elemento
+		
+		break
+
+		case 3:
+		
+		var upd = prompt("cual elemento deseas actualizar?")
+		var list = document.getElementById('milista');
+//milista.innerHTML = '';
+		lista.removeChild(list.childNodes[upd]);
+		//delete upd
+		
+		var neww = prompt("nuevo elemento")
+			var entry = document.createElement('li');
+			entry.appendChild(document.createTextNode(neww));
+			list.appendChild(entry);
+			
+		break
+
+		default:
+			alert("opcion no valida")
+
+	}
+
+	}
+
+</script>
+
+</html>

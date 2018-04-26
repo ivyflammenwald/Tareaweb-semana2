@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+<title>cambio de color</title>
+</head>
+<body>
+	<br>
+	<div>
+
+		<center>
+		<div>
+		<p  id="cuad"> me van a cambiar el color </p>
+		</div>
+		</center>
+		
+	</div>
+	
+	<center>
+		<button onclick="cambio()">funct no sirve</button>
+		<button type="button" onclick="document.getElementById('cuad').style.color = 'red'">colores 2</button>
+		<button type="button" onclick="document.getElementById('cuad').style.color = 'blue'">colores 3</button>
+	</center>
+</body>
+
+
+<script>
+function cambio() {
+	
+	document.getElementById("cuad").css("background-color", "yellow");
+	document.getElementById("cuad").style.color = "green";
+   }
+
+</script>
+
+</html>

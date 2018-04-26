@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+<title>Piedra papel o tijera</title>
+</head>
+<body onload="juego()" >
+	<div class="row">
+		<div></div>
+	</div>
+</body>
+
+<script >
+	function juego() {
+	alert("Piedra papel o tijeras")
+	var x = prompt("escribe tu eleccion");
+
+	var ax = Math.floor((Math.random() * 10) + 1);
+	
+
+	switch(x){
+
+
+		case "piedra":
+
+			if (ax == 5){
+				alert("piedra, empate")
+			}else if (ax <5){
+				alert("papel, perdiste")
+			}else{
+				alert("tijera, ganaste")
+			}
+		break
+
+		case "papel":
+			if (ax == 5){
+				alert("papel, empate")
+			}else if (ax <5){
+				alert("tijeras, perdiste")
+			}else{
+				alert("piedra, ganaste")
+			}
+		break
+
+		case "tijeras", "tijera":
+			if (ax == 5){
+				alert("tijeras, empate")
+			}else if (ax <5){
+				alert("piedra, perdiste")
+			}else{
+				alert("papel, ganaste")
+			}
+		break
+
+		default:
+			alert("opcion no valida, perdiste")
+
+	}
+	
+}
+
+</script>
+
+</html>

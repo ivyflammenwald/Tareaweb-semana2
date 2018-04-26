@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+<title>lista dom</title>
+</head>
+<body>
+	<br>
+	<div>
+
+		<center>
+			<h1>Lista desde dom</h1>
+			<br>
+			<br>
+
+			<div id="paralista"></div>
+
+				<ol id="milista" type="1">
+	 		 		
+				</ol>  
+
+			</div>
+		</center>
+		
+
+	</div>
+	
+	<center>
+		<button onclick="lista()" >insertar lista</button>
+		
+	</center>
+
+
+
+</body>
+
+
+<script >
+	function lista(){
+		alert("Ingresar elementos en la lista")
+		var x = prompt("cuantos elementos quieres en la lista?")
+
+		var list = document.getElementById('milista');
+		
+		for(var i = 0; i<x ;i++){
+			var z = prompt("ingresa elemento "+(i+1));
+			var entry = document.createElement('li');
+			entry.appendChild(document.createTextNode(z));
+			list.appendChild(entry);
+		}
+	}
+
+</script>
+
+</html>
